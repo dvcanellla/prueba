@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/*reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*fin fin reset*/
+
+
+body {
+    background: #000;
+    margin: 0;
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    
+    font-family: Roboto;
+}
+
+
+
+
+
+/*plantilla*/
+.plantilla {
+    width: 340px;
+    height: 800px;
+    background: #fff;
+    border-radius: 40px;
+}
+/*fin fin plantilla*/
+
+
+
+
+
+/*iconos superiores*/
+.del-telefono {
+    height: 32px;
+    background: #eee;
+    border-radius: 40px 40px 0 0;
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;  
+    padding: 0 22px 0 30px;
+    
+    font-size: 14px;
+    
+/
+}
+
+.del-telefono .hora {   
+    font-weight: 600;      
+}
+/*fin fin iconos superiores*/
+
+
+
+
+
+/*cabecera*/
+.cabecera {
+    height: 58px;
+    background: #eee;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 0 17px; 
+}
+
+.cabecera .actualizar {    
+    font-size: 25px;
+}
+
+.cabecera .nombre {    
+    display: flex;
+    align-items: center;
+    font-weight: 600;    
+}
+
+.cabecera .nombre .texto {    
+    font-size: 20px;
+}
+
+.cabecera .nombre .numero {    
+    font-size: 18px;
+    text-align: center;     
+    
+    display:block;
+    width: 20px;
+    height: 20px;
+    background: #f00;
+    border-radius: 50%;
+    
+    margin-left: 5px; 
+}
+
+.cabecera .ham {    
+    font-size: 25px;
+}
+/*fin fin cabecera*/
+
+
+
+
+
+/*perfil*/
+/*arriba*/
+.arriba {
+    height: 110px;
+/*    background: #0d0;*/
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 17px 0 14px;
+}
+
+.arriba .avatar .corona-foto {
+    width: 85px;
+    height: 85px;
+    
+    background: rgb(241,8,240);
+background: linear-gradient(180deg, rgba(241,8,240,0.4738270308123249) 41%, rgba(230,99,13,0.8687850140056023) 81%);
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.arriba .avatar .corona-foto .foto {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-image:  url(https://source.unsplash.com/6W4F62sN_yI/85x85);
+    background-position: center;
+    background-size: cover;    
+}
+
+.arriba .avatar .corona-foto .foto span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: deepskyblue;
+    color: #fff;
+    border: .5px solid #fff;
+    font-size: 18px;
+    text-align: center;   
+    position:relative; 
+    top: 53px;
+    left: 60px;
+    font-weight: 300;
+}
+
+.arriba .derecha-avatar {
+    width: 219px;
+/*    background: #ccc;*/
+    
+    display:grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr
+                        1fr;
+}
+
+.arriba .derecha-avatar .post{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arriba .derecha-avatar .followers{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.arriba .derecha-avatar .following{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arriba .derecha-avatar a{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600; 
+    text-decoration: none;
+    color: #000;
+    margin-top: 5px;
+}
+
+
+.arriba span:first-child{
+    font-weight: 600;    
+}
+
+.arriba span:last-child{
+    font-size: 12px; 
+    color: #ccc;
+}
+/*fin fin arriba*/
+
+
+
+
+
+/*abajo*/
+.abajo {
+    height: 130px;
+/*    background: #00c;*/
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding-left: 12px;
+    padding-right: 90px
+}
+
+.abajo .nombre {
+    font-size: 20px;   
+}
+
+.abajo .aficion {
+    font-size: 12px; 
+    color: #ccc;
+}
+
+.abajo .descripcion {
+    font-size: 12px; 
+    line-height: 16px;
+}
+
+.abajo .followed {
+    font-size: 11px; 
+    color: #ccc;
+}
+
+.abajo .followed span {
+    color: #000;
+    font-weight: 600;
+}
+/*fin fin abajo*/
+
+/*fin fin perfil*/
+
+
+
+
+/*historis*/
+.historis {
+    height: 100px;
+/*    width: 340px; Con este ancho, al sobrepasar el ancho los círculos se desarma*/
+/*    width: 1000px;*/
+    width: 100vw; /*También sirve*/
+    
+    display: flex;
+    align-items: center;
+
+    margin-left: 12px;
+    padding-bottom: 12px;
+    box-sizing: border-box;   
+}
+
+.historis .histori {
+    background: #fff;
+    border: .1px solid #ccc;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+ 
+    font-size: 12px;
+    margin-right: 22px;    
+    box-sizing: border-box;    
+}
+
+.historis .histori div {
+    width: 54px;
+    height: 54px;
+    background: #fff;
+    border: .1px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    
+    box-sizing: border-box;
+    
+    background-position: center;
+    background-size: cover;    
+}
+
+.historis .histori .histori-mas-foto {
+    text-align: center;
+    line-height: 52px;
+    font-size: 30px;  
+    
+}
+
+.historis .histori span{
+    position: relative;
+    top: 40px;    
+}
+
+.historis .histori .histori-foto-1 {background-image:url(https://source.unsplash.com/jJ5fUtcN-Ns/400x400);}
+.historis .histori .histori-foto-2 {background-image:url(https://source.unsplash.com/WGdliLPgMaA/400x400);}
+.historis .histori .histori-foto-3{background-image:url(https://source.unsplash.com/7YLe87dcrm8/400x400);}
+.historis .histori .histori-foto-4{background-image:url(https://source.unsplash.com/NRTbEejlCrg/400x400);}
+/*fin fin historis*/
+
+
+
+
+
+
+/*panel-fotos*/
+
+.panel-fotos {
+    height: 325px;
+/*    background: red;*/
+}
+
+.panel-fotos .arriba {
+    height: 43px;
+    font-size: 25px;
+    color: #ccc;
+    border-top: 1px solid #ccc;
+    margin: 0;
+    padding: 0 45px;
+}
+
+.panel-fotos .abajo {  
+    height: 282px;
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr
+                        1fr
+                        1fr;
+    justify-content: center;
+    padding: 0 5px;
+    grid-gap: 2.5px;
+    
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/*fin fin panel-fotos*/
+
+
+
+
+
+/*footer*/
+
+.footer {
+    height: 45px;
+    border-radius: 0 0 40px 40px;
+    
+    font-size: 25px;
+       
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-content: center;
+    justify-items: center;
+    
+}
+
+.footer .mini-avatar {
+    position: relative;
+}
+
+
+.footer .mini-avatar .bocadillo {
+    width: 59px;  
+    height: 45px;
+    background: #f00;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 45px;
+    
+    position: absolute;
+    top: -70px;
+    left: -18px;
+}
+
+
+.footer .mini-avatar .bocadillo .triangulo {
+    width: 0;  
+    height: 0;
+/*    background: #f00;*/
+
+    font-size: 18px;
+    margin: auto;
+    border-left: 7px solid transparent ;
+    border-right: 7px solid transparent;
+    border-top: 7px solid red;
+    
+    box-sizing: border-box;  
+ }
+
+
+
+.footer .mini-avatar .corona-foto {
+    width: 25px;
+    height: 25px;
+    
+    background: rgb(241,8,240);
+background: linear-gradient(180deg, rgba(241,8,240,0.4738270308123249) 41%, rgba(230,99,13,0.8687850140056023) 81%);
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.footer .mini-avatar .corona-foto .foto {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-image:  url(https://source.unsplash.com/6W4F62sN_yI/85x85);
+    background-position: center;
+    background-size: cover;    
+}
+
+
+
+.footer .mini-avatar .corona-foto span {
+    color: fuchsia;
+    position:absolute;
+    padding-top: 6px;
+    padding-left: 6px;      
+}
+/*fin fin footer*/
